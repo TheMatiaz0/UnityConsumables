@@ -41,5 +41,6 @@ Material:
     - _Fullscreen_DepthWrite: 0
     - _GlitchStrength: 0.01
     - _NoiseScale: 21.89
+    - _TimeMultiply: 10
     m_Colors: []
   m_BuildTextureStacks: []
