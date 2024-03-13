@@ -37,8 +37,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Blend: 0.886
+    - _Blend: 0.18
     - _Fullscreen_DepthWrite: 0
-    - _NoiseScale: 15.35
+    - _GlitchStrength: 0.01
+    - _NoiseScale: 21.89
     m_Colors: []
   m_BuildTextureStacks: []
