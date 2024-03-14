@@ -101,6 +101,7 @@ GameObject:
   - component: {fileID: 2660236496988923929}
   - component: {fileID: 3603098258680566393}
   - component: {fileID: 1532844650602250521}
+  - component: {fileID: 80281904636862035}
   m_Layer: 5
   m_Name: P_InventorySlot
   m_TagString: Untagged
@@ -180,6 +181,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &80281904636862035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3718740986472330259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e523a4fbb06097d4e89b67827903e170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemIcon: {fileID: 4182629023803699149}
 --- !u!1 &4454991767332417632
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,7 +207,7 @@ GameObject:
   - component: {fileID: 5635737242898921049}
   - component: {fileID: 8170543883561964364}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MaskContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
