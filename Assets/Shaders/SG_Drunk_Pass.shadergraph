@@ -33,6 +33,12 @@
     "m_CategoryData": [
         {
             "m_Id": "58f40455834e4ed8a751f34672ee0905"
+        },
+        {
+            "m_Id": "93ea01a0b7b549e381966337467d1fa7"
+        },
+        {
+            "m_Id": "ea01fbf5c9bd4f28bdfa873f809061a0"
         }
     ],
     "m_Nodes": [
@@ -1745,32 +1751,7 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "58f40455834e4ed8a751f34672ee0905",
     "m_Name": "",
-    "m_ChildObjectList": [
-        {
-            "m_Id": "260d90eaae934291acdd0c73330372ab"
-        },
-        {
-            "m_Id": "8a4f4bbca4c74b68b19ae74991239a14"
-        },
-        {
-            "m_Id": "baa1e0819b7243a79b5581af3d67f260"
-        },
-        {
-            "m_Id": "0ce65563a2f4435bb265d3594f9b6daa"
-        },
-        {
-            "m_Id": "e32ad1cbc8b74111a25657b91620740c"
-        },
-        {
-            "m_Id": "847e5f1f11574522b5ebd20df33e8f6e"
-        },
-        {
-            "m_Id": "dba01a2b2cfb42fb8e4b2c5a4d21574e"
-        },
-        {
-            "m_Id": "ed3e0809c4324e8d9a8bb765ce9325c9"
-        }
-    ]
+    "m_ChildObjectList": []
 }
 
 {
@@ -2655,6 +2636,27 @@
         "z": 0.0,
         "w": 0.0
     }
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "93ea01a0b7b549e381966337467d1fa7",
+    "m_Name": "Wave",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "260d90eaae934291acdd0c73330372ab"
+        },
+        {
+            "m_Id": "847e5f1f11574522b5ebd20df33e8f6e"
+        },
+        {
+            "m_Id": "dba01a2b2cfb42fb8e4b2c5a4d21574e"
+        },
+        {
+            "m_Id": "e32ad1cbc8b74111a25657b91620740c"
+        }
+    ]
 }
 
 {
@@ -3967,6 +3969,27 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "ea01fbf5c9bd4f28bdfa873f809061a0",
+    "m_Name": "Voronoi",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "baa1e0819b7243a79b5581af3d67f260"
+        },
+        {
+            "m_Id": "0ce65563a2f4435bb265d3594f9b6daa"
+        },
+        {
+            "m_Id": "8a4f4bbca4c74b68b19ae74991239a14"
+        },
+        {
+            "m_Id": "ed3e0809c4324e8d9a8bb765ce9325c9"
+        }
+    ]
 }
 
 {
