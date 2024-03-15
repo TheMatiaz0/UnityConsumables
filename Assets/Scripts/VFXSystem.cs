@@ -1,13 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class VFXTimedActivable
 {
     public VFXActivable Activable;
-    public float? Time;
+    public float Time;
 
-    public VFXTimedActivable(VFXActivable activable, float? time)
+    public VFXTimedActivable(VFXActivable activable, float time)
     {
         Activable = activable;
         Time = time;
@@ -16,17 +18,22 @@ public class VFXTimedActivable
 
 public class VFXSystem : MonoBehaviour
 {
-    private Queue<VFXTimedActivable> vfxActivables = new();
+    [SerializeField]
+    private List<VFXTimedActivable> activables = new();
+
+    private readonly Queue<VFXTimedActivable> vfxActivableQueue = new();
     private Coroutine processVFXCoroutine;
 
     private void Start()
     {
+        // vfxActivableQueue = new(activables);
         processVFXCoroutine = StartCoroutine(Process());
     }
 
-    public void AddEffectToQueue(VFXTimedActivable activable)
+    public void AddEffectToQueue(Material vfxMaterial, float time)
     {
-        vfxActivables.Enqueue(activable);
+        var activable = activables.Find(x => vfxMaterial == x.Activable.VFXMaterial);
+        vfxActivableQueue.Enqueue(new(activable.Activable, time));
 
         if (processVFXCoroutine == null)
         {
@@ -36,17 +43,14 @@ public class VFXSystem : MonoBehaviour
 
     private IEnumerator Process()
     {
-        while (vfxActivables.Count > 0)
+        while (vfxActivableQueue.Count > 0)
         {
             VFXTimedActivable timedActivable;
-            yield return (timedActivable = vfxActivables.Dequeue());
+            yield return (timedActivable = vfxActivableQueue.Dequeue());
 
             timedActivable.Activable.Activate();
-            if (timedActivable.Time.HasValue || timedActivable.Time == 0)
-            {
-                yield return new WaitForSeconds(timedActivable.Time.Value);
-                timedActivable.Activable.Deactivate();
-            }
+            yield return new WaitForSeconds(timedActivable.Time);
+            timedActivable.Activable.Deactivate();
         }
 
         processVFXCoroutine = null;

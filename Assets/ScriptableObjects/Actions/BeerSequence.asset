@@ -9,16 +9,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4aad1849b8372ad4293e1191809eed5a, type: 3}
-  m_Name: SO_BeerItemDefinition
+  m_Script: {fileID: 11500000, guid: 8681988051bab914d962ba2c671c13fb, type: 3}
+  m_Name: BeerSequence
   m_EditorClassIdentifier: 
-  itemIcon: {fileID: 21300000, guid: 1d527417fa2f9854e9287f12118e0ad3, type: 3}
-  itemName: Beer
-  itemDescription: This might create promising cover up for future actions. Using
-    this must have visual effect made in Unity 2022.3.2f1 with Shader Graphs
-  useAction:
-    mode: 0
+  actions:
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: fbb073ea38899fa468124a6d5e8eaf1a, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
     unityReference: {fileID: 11400000, guid: 9472b048526f12044b20da5de53009c4, type: 2}
+    rawReference:
+      rid: -2
+  - mode: 0
+    unityReference: {fileID: 11400000, guid: 2a39262f440339b42991124a747da267, type: 2}
     rawReference:
       rid: -2
   references:

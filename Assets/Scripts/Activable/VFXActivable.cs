@@ -7,12 +7,8 @@ public class VFXActivable : MonoBehaviour, IActivable
     [SerializeField]
     private Material vfxMaterial;
 
+    public Material VFXMaterial => vfxMaterial;
     public bool IsActive => vfxMaterial.IsKeywordEnabled(ENABLED);
-
-    private void Awake()
-    {
-        Activate();
-    }
 
     public void Activate()
     {
@@ -22,10 +18,5 @@ public class VFXActivable : MonoBehaviour, IActivable
     public void Deactivate()
     {
         vfxMaterial.DisableKeyword(ENABLED);
-    }
-
-    private void OnDestroy()
-    {
-        Deactivate();
     }
 }

@@ -17,11 +17,11 @@ public class ItemDefinition : ScriptableObject
     private string itemDescription;
 
     [SerializeField]
-    private Object useAction;
+    private SerializableInterface<IContextAction> useAction;
 
     public Sprite ItemIcon => itemIcon;
     public string ItemName => itemName;
     public string ItemDescription => itemDescription;
-    public IContextAction<IContext> UseAction => useAction as IContextAction<IContext>;
+    public IContextAction UseAction => useAction?.Value;
 
 }
