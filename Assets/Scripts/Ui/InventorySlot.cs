@@ -8,10 +8,11 @@ public class ItemSlotRequirement : MonoBehaviour
     [SerializeField]
     private Image itemIcon;
 
-    protected ItemDefinition itemDefinition;
+    protected ItemDefinition cachedItemDefinition;
 
     public void Refresh(ItemDefinition itemDefinition)
     {
+        cachedItemDefinition = itemDefinition;
         itemIcon.sprite = itemDefinition.ItemIcon;
     }
 }
@@ -23,16 +24,16 @@ public class InventorySlot : ItemSlotRequirement, ISubmitHandler, ISelectHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        OnSubmitEvent?.Invoke(itemDefinition);
+        OnSubmitEvent?.Invoke(cachedItemDefinition);
     }
 
     public void OnSelect(BaseEventData eventData)
     {
-        OnSelectionChangedEvent?.Invoke(itemDefinition);
+        OnSelectionChangedEvent?.Invoke(cachedItemDefinition);
     }
 
     public void OnSubmit(BaseEventData eventData)
     {
-        OnSubmitEvent?.Invoke(itemDefinition);
+        OnSubmitEvent?.Invoke(cachedItemDefinition);
     }
 }
