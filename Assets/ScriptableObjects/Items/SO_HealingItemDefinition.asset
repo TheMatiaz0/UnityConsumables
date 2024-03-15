@@ -15,4 +15,4 @@ MonoBehaviour:
   itemIcon: {fileID: 21300000, guid: 762ab36fa6e3a914989729c62a03364b, type: 3}
   itemName: Medicine
   itemDescription: This might help ease headaches. Hopefully it doesn't display in
-    developer console text "healing player" <sprite=5>
+    developer console text "healing player"

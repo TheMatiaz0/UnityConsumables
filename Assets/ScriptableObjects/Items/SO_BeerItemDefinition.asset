@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemIcon: {fileID: 21300000, guid: 1d527417fa2f9854e9287f12118e0ad3, type: 3}
   itemName: Beer
-  itemDescription: "This might create promising cover up for future actions. Using
-    this must have visual effect made in Unity 2022.3.2f1 with Shader Graphs <sprite=3>\uFFFD"
+  itemDescription: This might create promising cover up for future actions. Using
+    this must have visual effect made in Unity 2022.3.2f1 with Shader Graphs
