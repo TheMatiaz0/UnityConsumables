@@ -16,3 +16,4 @@ MonoBehaviour:
   itemName: Medicine
   itemDescription: This might help ease headaches. Hopefully it doesn't display in
     developer console text "healing player"
+  useAction: {fileID: 11400000, guid: e639f0221cabbd9448f672112efdc5b1, type: 2}

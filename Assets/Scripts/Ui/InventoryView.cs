@@ -13,7 +13,7 @@ public class InventoryView : MonoBehaviour, IActivable
     private SerializableInterface<IInventoryReader> inventoryReader;
 
     [SerializeField]
-    private SerializableInterface<IActivable> view;
+    private SerializableInterface<IActivable> inventoryViewActivable;
 
     [SerializeField]
     private ItemDetailsView itemDetails;
@@ -21,11 +21,11 @@ public class InventoryView : MonoBehaviour, IActivable
     [SerializeField]
     private SerializableInterface<IItemUseContext> context;
 
-    public bool IsActive => view.Value.IsActive;
+    public bool IsActive => inventoryViewActivable.Value.IsActive;
 
     public void Activate()
     {
-        view.Value?.Activate();
+        inventoryViewActivable.Value?.Activate();
         Refresh(inventoryReader.Value);
     }
 
@@ -66,11 +66,13 @@ public class InventoryView : MonoBehaviour, IActivable
     private void OnSubmitItem(ItemDefinition item)
     {
         itemDetails.Refresh(item, context.Value);
+        context.Value.SelectedItem = item;
     }
 
     public void Deactivate()
     {
-        view.Value?.Deactivate();
+        inventoryViewActivable.Value?.Deactivate();
+        context.Value.SelectedItem = null;
         itemDetails.Refresh(null);
     }
 }
