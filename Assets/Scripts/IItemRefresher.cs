@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IItemAction : IAction
+public interface IItemRefresher
 {
-    // ...
+    void Refresh(ItemDefinition item);
 }

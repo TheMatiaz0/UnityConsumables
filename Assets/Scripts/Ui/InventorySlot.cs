@@ -1,11 +1,14 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlotRequirement : MonoBehaviour
+public class ItemSlotRequirement : MonoBehaviour, IItemRefresher
 {
     [SerializeField]
     private Image itemIcon;
+
+    protected ItemDefinition itemDefinition;
 
     public void Refresh(ItemDefinition itemDefinition)
     {
@@ -15,19 +18,21 @@ public class ItemSlotRequirement : MonoBehaviour
 
 public class InventorySlot : ItemSlotRequirement, ISubmitHandler, ISelectHandler, IPointerClickHandler
 {
+    public event Action<ItemDefinition> OnSubmitEvent;
+    public event Action<ItemDefinition> OnSelectionChangedEvent;
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("pointer submit");
+        OnSelectionChangedEvent?.Invoke(itemDefinition);
     }
 
     public void OnSelect(BaseEventData eventData)
     {
-        Debug.Log("select");
+        OnSelectionChangedEvent?.Invoke(itemDefinition);
     }
 
     public void OnSubmit(BaseEventData eventData)
     {
-        // use ItemAction from Inventory here..
-        Debug.Log("submit");
+        OnSubmitEvent?.Invoke(itemDefinition);
     }
 }

@@ -294,6 +294,12 @@ MonoBehaviour:
     unityReference: {fileID: 1335384567007296103}
     rawReference:
       rid: -2
+  itemDetails: {fileID: 104906127204727435}
+  context:
+    mode: 0
+    unityReference: {fileID: 0}
+    rawReference:
+      rid: -2
   references:
     version: 2
     RefIds:
@@ -1738,10 +1744,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6950238910630267612, guid: 90184a57e13c0184e96622250c79ec04, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6950238910630267612, guid: 90184a57e13c0184e96622250c79ec04, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
@@ -1750,6 +1752,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90184a57e13c0184e96622250c79ec04, type: 3}
+--- !u!114 &104906127204727435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 631663568748079529, guid: 90184a57e13c0184e96622250c79ec04, type: 3}
+  m_PrefabInstance: {fileID: 698248408305259298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d964d44e7623a14ea5821262d97f2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &160534085344224388 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 831751805519837094, guid: 90184a57e13c0184e96622250c79ec04, type: 3}

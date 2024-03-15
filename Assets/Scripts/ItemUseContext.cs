@@ -1,7 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
+using TNRD;
 using UnityEngine;
 
-public interface IItemUseContext : IContext
+public class ItemUseContext : MonoBehaviour, IItemUseContext
 {
+    [SerializeField]
+    private SerializableInterface<IInventoryWriter> inventoryWriter;
+
+    public IInventoryWriter InventoryWriter => inventoryWriter?.Value;
 }

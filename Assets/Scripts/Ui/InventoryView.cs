@@ -15,6 +15,12 @@ public class InventoryView : MonoBehaviour, IActivable
     [SerializeField]
     private SerializableInterface<IActivable> view;
 
+    [SerializeField]
+    private ItemDetailsView itemDetails;
+
+    [SerializeField]
+    private SerializableInterface<IContext> context;
+
     public bool IsActive => view.Value.IsActive;
 
     public void Activate()
@@ -48,11 +54,24 @@ public class InventoryView : MonoBehaviour, IActivable
         {
             var inventorySlot = Instantiate(slotPrefab, slotParent);
             inventorySlot.Refresh(itemDefinition);
+            inventorySlot.OnSubmitEvent += OnSubmitItem;
+            inventorySlot.OnSelectionChangedEvent += OnSelectionChanged;
         }
+    }
+
+    private void OnSelectionChanged(ItemDefinition item)
+    {
+
+    }
+
+    private void OnSubmitItem(ItemDefinition item)
+    {
+        itemDetails.Refresh(item);
     }
 
     public void Deactivate()
     {
         view.Value?.Deactivate();
+        itemDetails.Refresh(null);
     }
 }
