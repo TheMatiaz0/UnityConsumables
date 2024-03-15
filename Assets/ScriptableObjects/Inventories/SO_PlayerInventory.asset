@@ -12,4 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d809bd8de20720f49817d37982eb7a5e, type: 3}
   m_Name: SO_PlayerInventory
   m_EditorClassIdentifier: 
-  containedItems: []
+  items:
+  - {fileID: 11400000, guid: 45152490305fb7b45b68a7fad23046dc, type: 2}
+  - {fileID: 11400000, guid: 0e26c7ce22ca28a418fdce83d4edb2a1, type: 2}
+  maxItemAmount: 20

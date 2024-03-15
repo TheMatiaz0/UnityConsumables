@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InventorySystem : MonoBehaviour, IInventory
+public class InventoryManager : MonoBehaviour, IInventoryWriter
 {
     [SerializeField]
     private InventoryDefinition inventory;
