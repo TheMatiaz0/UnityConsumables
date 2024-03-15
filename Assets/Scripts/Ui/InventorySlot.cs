@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemSlotRequirement : MonoBehaviour, IItemRefresher
+public class ItemSlotRequirement : MonoBehaviour
 {
     [SerializeField]
     private Image itemIcon;

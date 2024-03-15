@@ -19,7 +19,7 @@ public class InventoryView : MonoBehaviour, IActivable
     private ItemDetailsView itemDetails;
 
     [SerializeField]
-    private SerializableInterface<IContext> context;
+    private SerializableInterface<IItemUseContext> context;
 
     public bool IsActive => view.Value.IsActive;
 
@@ -61,12 +61,11 @@ public class InventoryView : MonoBehaviour, IActivable
 
     private void OnSelectionChanged(ItemDefinition item)
     {
-
     }
 
     private void OnSubmitItem(ItemDefinition item)
     {
-        itemDetails.Refresh(item);
+        itemDetails.Refresh(item, context.Value);
     }
 
     public void Deactivate()

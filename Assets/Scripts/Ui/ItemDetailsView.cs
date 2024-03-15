@@ -2,8 +2,11 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemDetailsView : MonoBehaviour, IItemRefresher
+public class ItemDetailsView : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject root;
+
     [SerializeField]
     private Image thumbnail;
 
@@ -17,11 +20,20 @@ public class ItemDetailsView : MonoBehaviour, IItemRefresher
     private Button useItemButton;
 
     private ItemDefinition currentSelectedItem;
+    private IItemUseContext currentItemContext;
 
-    public void Refresh(ItemDefinition item)
+    public void Refresh(ItemDefinition item, IItemUseContext itemUseContext = null)
     {
+        root.SetActive(item != null);
+        if (item == null)
+        {
+            return;
+        }
+
         useItemButton.onClick.RemoveAllListeners();
+
         currentSelectedItem = item;
+        currentItemContext = itemUseContext;
 
         thumbnail.sprite = item.ItemIcon;
         itemName.SetText(item.ItemName);
@@ -32,7 +44,9 @@ public class ItemDetailsView : MonoBehaviour, IItemRefresher
 
     private void UseItem()
     {
-        // add inventory context
-        currentSelectedItem.UseAction.Execute();
+        if (currentItemContext != null)
+        {
+            currentSelectedItem.UseAction.Execute(currentItemContext);
+        }
     }
 }
