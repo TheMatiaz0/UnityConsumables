@@ -16,3 +16,13 @@ MonoBehaviour:
   itemName: Beer
   itemDescription: This might create promising cover up for future actions. Using
     this must have visual effect made in Unity 2022.3.2f1 with Shader Graphs
+  actionUponUse:
+    mode: 0
+    unityReference: {fileID: 11400000, guid: f2ff4e059c7a4b646aecfc8ff7c25286, type: 2}
+    rawReference:
+      rid: -2
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
