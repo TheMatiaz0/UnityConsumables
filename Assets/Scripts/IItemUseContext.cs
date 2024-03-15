@@ -6,4 +6,5 @@ public interface IItemUseContext : IContext
 {
     IInventoryWriter InventoryWriter { get; }
     ItemDefinition SelectedItem { get; set; }
+    VFXSystem VFXSystem { get; }
 }

@@ -164,8 +164,8 @@ GameObject:
   - component: {fileID: 8853847129048112215}
   - component: {fileID: 629454257947459053}
   - component: {fileID: 320984060505410928}
-  - component: {fileID: 1335384567007296103}
   - component: {fileID: 2947928578267443191}
+  - component: {fileID: 1335384567007296103}
   m_Layer: 5
   m_Name: P_InventoryCanvas
   m_TagString: Untagged
@@ -257,19 +257,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1335384567007296103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774174578901352832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc420010791052c4d8f1f5abfbfc909b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviour: {fileID: 8853847129048112215}
 --- !u!114 &2947928578267443191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,9 +276,9 @@ MonoBehaviour:
     unityReference: {fileID: 11400000, guid: 396764837bc2ed34680b8e3f7f2969c0, type: 2}
     rawReference:
       rid: -2
-  view:
+  inventoryViewActivable:
     mode: 0
-    unityReference: {fileID: 1335384567007296103}
+    unityReference: {fileID: 0}
     rawReference:
       rid: -2
   itemDetails: {fileID: 104906127204727435}
@@ -305,6 +292,19 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+--- !u!114 &1335384567007296103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774174578901352832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc420010791052c4d8f1f5abfbfc909b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviour: {fileID: 8853847129048112215}
 --- !u!1 &1839728534035350902
 GameObject:
   m_ObjectHideFlags: 0

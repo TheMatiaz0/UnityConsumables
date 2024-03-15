@@ -23,7 +23,7 @@ public class InventorySlot : ItemSlotRequirement, ISubmitHandler, ISelectHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        OnSelectionChangedEvent?.Invoke(itemDefinition);
+        OnSubmitEvent?.Invoke(itemDefinition);
     }
 
     public void OnSelect(BaseEventData eventData)

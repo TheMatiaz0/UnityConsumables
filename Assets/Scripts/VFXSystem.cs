@@ -16,7 +16,7 @@ public class VFXTimedActivable
 
 public class VFXSystem : MonoBehaviour
 {
-    private Queue<VFXTimedActivable> vfxActivables;
+    private Queue<VFXTimedActivable> vfxActivables = new();
     private Coroutine processVFXCoroutine;
 
     private void Start()
