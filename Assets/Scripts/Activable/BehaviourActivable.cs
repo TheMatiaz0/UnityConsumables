@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ActivableBehaviour : MonoBehaviour, IActivable
+public class BehaviourActivable : MonoBehaviour, IActivable
 {
     [SerializeField]
     private Behaviour behaviour;
