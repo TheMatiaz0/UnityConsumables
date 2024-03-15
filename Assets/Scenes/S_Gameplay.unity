@@ -571,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minMaxWaveScale: {x: 0.012, y: 0.017}
   voronoiScale: 0.0014
-  _fullscreenMaterial: {fileID: 2100000, guid: 2146ad247b7f4714cb23db9b2db7b44d, type: 2}
+  fullscreenMaterial: {fileID: 2100000, guid: 2146ad247b7f4714cb23db9b2db7b44d, type: 2}
 --- !u!1 &2104998072
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +971,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1637809097748558006, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641714942727567040, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641714942727567040, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641714942727567040, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
+      propertyPath: m_SizeDelta.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1774174578901352832, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
@@ -1403,7 +1415,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5275984973508880587, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 4.853012
+      value: -12605.744
       objectReference: {fileID: 0}
     - target: {fileID: 5298011497839596158, guid: e0925bea02c2515448421b6e46e3c88c, type: 3}
       propertyPath: m_AnchorMax.x
