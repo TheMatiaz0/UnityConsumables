@@ -15,34 +15,35 @@ public class InventoryView : MonoBehaviour, IActivable
     [SerializeField]
     private SerializableInterface<IActivable> view;
 
-#if UNITY_EDITOR
-
-    [Header("Editor Debug")]
-    [SerializeField]
-    private SerializableInterface<IInventoryReader> editorInventoryReader;
-
-#endif
-
     public bool IsActive => view.Value.IsActive;
 
     public void Activate()
     {
         view.Value?.Activate();
-        CreateItems(inventoryReader.Value);
+        Refresh(inventoryReader.Value);
     }
 
-    private void CreateItems(IInventoryReader inventoryReader)
+    private void Refresh(IInventoryReader inventoryReader)
     {
         if (inventoryReader == null)
         {
             return;
         }
 
+        CleanupItems();
+        CreateItems(inventoryReader);
+    }
+
+    private void CleanupItems()
+    {
         foreach (Transform child in slotParent)
         {
             Destroy(child.gameObject);
         }
+    }
 
+    private void CreateItems(IInventoryReader inventoryReader)
+    {
         foreach (var itemDefinition in inventoryReader.Items)
         {
             var inventorySlot = Instantiate(slotPrefab, slotParent);
@@ -54,14 +55,4 @@ public class InventoryView : MonoBehaviour, IActivable
     {
         view.Value?.Deactivate();
     }
-
-#if UNITY_EDITOR
-
-    [ContextMenu("Refresh Editor Items")]
-    private void OnValidate()
-    {
-        CreateItems(editorInventoryReader.Value);
-    }
-
-#endif
 }
